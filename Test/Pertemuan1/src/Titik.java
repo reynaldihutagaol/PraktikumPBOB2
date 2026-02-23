@@ -1,47 +1,49 @@
-/*
-File      : Titik.java
-Deskripsi : Class Titik
-Pembuat   : Reynaldi Bertinus Hutagaol
-Tanggal   : 19 Februari 2026
-*/
+/*Nama File : Titik.java
+*Deskripsi  : Berisi atribut dan method dalam class Titik
+*Pembuat    : Reynaldi Bertinus
+*Tanggal    : 19 Februari 2026
+ */
 
 public class Titik {
-
+    /*********ATRIBUT*********/
     double absis;
     double ordinat;
 
-    // Constructor
-    public Titik(double absis, double ordinat) {
-        this.absis = absis;
-        this.ordinat = ordinat;
+    /************METHOD************/
+    //Konstruktor untuk membuat titik (0,0)
+    Titik(){
+        absis = 0;
+        ordinat = 0;
     }
 
-    // Method tampilkan titik
-    public void printTitik() {
-        System.out.println("(" + absis + ", " + ordinat + ")");
-    }
-
-    // Getter
-    public double getAbsis() {
+    //Mengembalikan nilai absis
+    double getAbsis(){
         return absis;
     }
 
-    public double getOrdinat() {
+    //Mengembalikan nilai ordinat
+    double getOrdinat(){
         return ordinat;
     }
 
-    // Setter
-    public void setAbsis(double absis) {
-        this.absis = absis;
+    //menggeser absis titik dengan nilai baru x
+    void setAbsis(double x){
+        absis = x;
     }
 
-    public void setOrdinat(double ordinat) {
-        this.ordinat = ordinat;
+    //menggeser ordinat titik dengan nilai baru y
+    void setOrdinat(double y){
+        ordinat = y;
     }
 
-    // Method geser titik
-    public void geser(double dx, double dy) {
-        absis += dx;
-        ordinat += dy;
+    //menggeser nilai absis dan ordinat titik masing-masing sejauh x dan y
+    void geser(double x, double y){
+        absis = absis + x;
+        ordinat = ordinat + y;
     }
-}
+
+    //Mencetak koordinat titik 
+    void printTitik(){
+        System.out.println("Titik (" + absis + "," + ordinat + ")");
+    }
+}//end class titik
